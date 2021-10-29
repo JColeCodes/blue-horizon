@@ -1,3 +1,4 @@
+/* Universal */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -49,6 +50,18 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
+}
+button#nav-toggle {
+    display: none;
+    background: none;
+    position: absolute;
+    top: 20px; right: 25px;
+    font-size: 60px;
+    line-height: 60px;
+    border: 0;
+    color: #ffffff;
+    width: fit-content;
+    transition: all 0.5s ease-out;
 }
 
 /* Hero */
@@ -135,4 +148,114 @@ footer {
 
 footer h2 {
     font-size: 20px;
+}
+
+/* Responsive! */
+/* 1024 */
+@media only screen and (max-width: 1040px), only screen and (max-device-width: 1040px) {
+
+    /* Header, Nav, Hero */
+    header h1 {
+        font-size: 84px;
+    }
+    header nav {
+        text-align: right;
+    }
+    header nav ul li {
+        display: block;
+    }
+    .hero {
+        height: 600px;
+    }
+
+    /* Content, Benefits */
+    .content {
+        width: 70%;
+    }
+    .content-box {
+        height: auto;
+    }
+    .benefits {
+        width: 25%;
+    }
+    
+
+}
+
+/* Smaller, like mobile */
+@media only screen and (max-width: 710px), only screen and (max-device-width: 710px) {
+
+    /* Header, Nav, Hero */
+    header {
+        padding: 0;
+    }
+    header h1{
+        display: block;
+        padding: 20px 20px 5px;
+    }
+    header nav {
+        float: none;
+        width: 100%;
+    }
+    header nav ul li {
+        display: block;
+        background-color: #2a607c;
+        text-align: center;
+        padding: 15px;
+        margin: 0;
+        transition: all 0.5s ease-out;
+    }
+    button#nav-toggle {
+        display: block;
+    }
+    .navigate li {
+        height: 1px;
+        padding: 0 15px;
+        overflow: hidden;
+        border-top: 1px solid rgba(0,0,0,0);
+    }
+    .responsive li {
+        height: auto;
+        padding: 15px;
+        overflow: auto;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+
+    /* Content, Benefits */
+    .content {
+        width: 100%;
+        display: block;
+        margin-left: 0;
+    }
+    .benefits {
+        float: none;
+        padding: 0;
+        background: none;
+        width: 100%;
+        text-align: center;
+    }
+    .benefit {
+        display: inline-block;
+        background-color: #2589bd;
+        padding: 20px;
+        margin: 5px;
+        width: calc(33% - 20px);
+    }
+    .benefit img {
+        max-width: 100%;
+    }
+    
+}
+
+/* Smaller Mobile */
+@media only screen and (max-width: 460px), only screen and (max-device-width: 460px) {
+
+    /* Content, Benefits */
+    p {
+        font-size: 20px;
+    }
+    .benefit {
+        margin: 5px 25px;
+        width: calc(100% - 50px);
+    }
 }
